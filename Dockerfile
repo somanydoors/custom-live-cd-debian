@@ -8,3 +8,6 @@ RUN apt-get update \
 
 # Create a directory for live cd config and build
 WORKDIR /livecd
+
+# Copy in the list of packages to include in the live CD
+COPY --chmod=644 package-lists/* config/package-lists/
