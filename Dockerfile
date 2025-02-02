@@ -1,6 +1,17 @@
 FROM debian:12
 
 ENV APT="aptitude"
+ENV APT_INDICES=false
+ENV APT_MIRROR="https://deb.debian.org/debian"
+ENV APT_SECURITY_MIRROR="https://security.debian.org/debian-security"
+ENV ARCHITECTURE="amd64"
+ENV ARCHIVE_AREAS="main contrib non-free-firmware"
+ENV BOOTAPPEND_LIVE="boot=live components quiet splash noeject"
+ENV CHROOT_FILESYSTEM="squashfs"
+ENV DISTRIBUTION="bookworm"
+ENV MEMTEST="none"
+ENV UEFI_SECURE_BOOT="enable"
+
 # Install live-build
 RUN apt-get update \
 	&& apt-get install -y \
