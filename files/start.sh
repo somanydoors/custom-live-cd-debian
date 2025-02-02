@@ -16,3 +16,4 @@ lb config \
     --mirror-bootstrap "${APT_MIRROR}" \
     --mirror-chroot-security "${APT_SECURITY_MIRROR}" \
     --uefi-secure-boot "${UEFI_SECURE_BOOT}"
+lb build
