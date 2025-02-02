@@ -6,6 +6,12 @@ Docker image to generate customized Debian live CD ISOs
 
 ## Usage
 
+```bash
+docker run -it \
+    -v "$(pwd)":/livecd/iso \
+    ghcr.io/somanydoors/custom-live-cd-debian:12
+```
+
 ### Configure the live CD
 
 | Environment Variable | `lb` CLI Argument | Default Value | Details |
@@ -25,6 +31,17 @@ Docker image to generate customized Debian live CD ISOs
 | `MEMTEST` | `--memtest` | `none` | Controls which, if any, `memtest` binary is included as a boot option on the live CD boot menu |
 | `MOTD` | *N/A* | *Welcome to the So Many Doors live CD!* | |
 | `UEFI_SECURE_BOOT` | `--uefi-secure-boot` | `enable` | Controls whether the signed EFI binaries should be included in the live CD to support Secure Boot |
+
+### Customizing the Boot Image
+
+You can set a custom boot image by setting the following values:
+
+| `BOOT_IMAGE_BASE64` | Base64 encoded PNG file |
+| `BOOT_IMAGE_WIDTH` | Width (in pixels) of the PNG |
+| `BOOT_IMAGE_HEIGHT` | Height (in pixels) of the PNG |
+| `BOOT_IMAGE_X_POS` | Starting X position of the PNG |
+| `BOOT_IMAGE_Y_POS` | Starting Y position of the PNG |
+| `BOOT_IMAGE_TITLE` | Title of the image |
 
 ### Dynamic MOTD
 
