@@ -20,5 +20,16 @@ lb config \
 echo "${MOTD}" > config/includes.chroot/etc/motd
 chmod 644 config/includes.chroot/etc/motd
 
+if [ -z ${BOOT_IMAGE_BASE64} ]; then
+BOOT_IMAGE_SVG_INJECT=$(cat <<EOF
+    <image width="${BOOT_IMAGE_WIDTH}" height="${BOOT_IMAGE_HEIGHT}" y="${BOOT_IMAGE_Y_POS}" x="${BOOT_IMAGE_X_POS}" xlink:href="data:image/png;base64,${BOOT_IMAGE_BASE64}">
+      <title>${BOOT_IMAGE_TITLE}</title>
+    </image>
+EOF
+)
+
+sed -i 's/<!-- BOOT IMAGE PLACEHOLDER -->/'"$BOOT_IMAGE_SVG_INJECT"'/g' "config/bootloaders/syslinux_common/splash.svg"
+fi
+
 lb build
 mv live-image-amd64.hybrid.iso "$ISO_OUT_DIR/$ISO_OUT_NAME.iso"
