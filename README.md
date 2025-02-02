@@ -19,5 +19,7 @@ Docker image to generate customized Debian live CD ISOs
 | `BOOTAPPEND_LIVE` | `--bootappend-live` | `boot=live components quiet splash noeject` | Space-separated list of kernel parameters to append to the default kernel command line for the live CD |
 | `CHROOT_FILESYSTEM` | `--chroot-filesystem` | `squashfs` | Controls the filesystem for storing the live OS root filesystem on the ISO |
 | `DISTRIBUTION` | `--distribution` | `bookworm` | Controls which version of Debian is installed in the live OS |
+| `ISO_OUT_DIR` | *N/A* | `/livecd/iso` | Controls the path where the built ISO should be placed inside the container |
+| `ISO_OUT_NAME` | *N/A* | `live-image-amd64.hybrid` | Controls the base name (without ISO extension) of the output ISO image |
 | `MEMTEST` | `--memtest` | `none` | Controls which, if any, `memtest` binary is included as a boot option on the live CD boot menu |
 | `UEFI_SECURE_BOOT` | `--uefi-secure-boot` | `enable` | Controls whether the signed EFI binaries should be included in the live CD to support Secure Boot |
