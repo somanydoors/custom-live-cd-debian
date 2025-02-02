@@ -1,5 +1,6 @@
 FROM debian:12
 
+ENV APT="aptitude"
 # Install live-build
 RUN apt-get update \
 	&& apt-get install -y \
