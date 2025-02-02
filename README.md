@@ -22,4 +22,5 @@ Docker image to generate customized Debian live CD ISOs
 | `ISO_OUT_DIR` | *N/A* | `/livecd/iso` | Controls the path where the built ISO should be placed inside the container |
 | `ISO_OUT_NAME` | *N/A* | `live-image-amd64.hybrid` | Controls the base name (without ISO extension) of the output ISO image |
 | `MEMTEST` | `--memtest` | `none` | Controls which, if any, `memtest` binary is included as a boot option on the live CD boot menu |
+| `MOTD` | *N/A* | *Welcome to the So Many Doors live CD!* | |
 | `UEFI_SECURE_BOOT` | `--uefi-secure-boot` | `enable` | Controls whether the signed EFI binaries should be included in the live CD to support Secure Boot |

@@ -12,6 +12,7 @@ ENV DISTRIBUTION="bookworm"
 ENV ISO_OUT_DIR="/livecd/iso"
 ENV ISO_OUT_NAME="live-image-amd64.hybrid"
 ENV MEMTEST="none"
+ENV MOTD="Welcome to the So Many Doors live CD!"
 ENV UEFI_SECURE_BOOT="enable"
 
 # Install live-build
