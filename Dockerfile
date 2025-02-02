@@ -31,6 +31,9 @@ COPY --chmod=644 package-lists/* config/package-lists/
 # Copy in the live boot hooks
 COPY --chmod=755 hooks/* config/includes.chroot/lib/live/config/
 
+# Copy in the MOTDs
+COPY --chmod=755 update-motd.d/* config/includes.chroot/etc/update-motd.d/
+
 # Copy in CMD script
 COPY --chmod=755 --chown=root:root files/start.sh /
 

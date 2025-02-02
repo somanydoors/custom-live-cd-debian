@@ -25,3 +25,7 @@ Docker image to generate customized Debian live CD ISOs
 | `MEMTEST` | `--memtest` | `none` | Controls which, if any, `memtest` binary is included as a boot option on the live CD boot menu |
 | `MOTD` | *N/A* | *Welcome to the So Many Doors live CD!* | |
 | `UEFI_SECURE_BOOT` | `--uefi-secure-boot` | `enable` | Controls whether the signed EFI binaries should be included in the live CD to support Secure Boot |
+
+### Dynamic MOTD
+
+If you put executable shell scripts into `update-motd.d` and rebuild the image, those scripts will be executed in alphabetical order after `/etc/motd` is printed to the console.
