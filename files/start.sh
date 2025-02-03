@@ -18,6 +18,7 @@ lb config \
     --uefi-secure-boot "${UEFI_SECURE_BOOT}"
 
 echo "${MOTD}" > config/includes.chroot/etc/motd
+chown root:root config/includes.chroot/etc/motd
 chmod 644 config/includes.chroot/etc/motd
 
 if [ -n "${GITHUB_USERNAME}"]; then
