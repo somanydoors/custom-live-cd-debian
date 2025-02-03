@@ -48,3 +48,19 @@ You can set a custom boot image by setting the following values at runtime:
 ### Dynamic MOTD
 
 If you put executable shell scripts into `update-motd.d` and rebuild the image, those scripts will be executed in alphabetical order after `/etc/motd` is printed to the console.
+
+
+## References
+
+- [Customizing Bootloader Settings](https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-binary.en.html)
+- [Question with some reference syslinux.cfg](https://unix.stackexchange.com/questions/657474/debian-livebuild-how-to-make-the-bootloader-to-directly-boot-to-live)
+- [Manpage for `lb config`](https://manpages.debian.org/unstable/live-build/lb_config.1.en.html)
+- [Debian documentation on customizing live CD filesystem contents](https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-contents.en.html)
+- [Debian documentation on live CD basics](https://live-team.pages.debian.net/live-manual/html/live-manual/the-basics.en.html)
+- [Debian documentation on customizing the packages installed in the live CD](https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-package-installation.en.html)
+- [Debian documentation on managing a live CD configuration (for live build servers, but good info)](https://live-team.pages.debian.net/live-manual/html/live-manual/managing-a-configuration.en.html)
+- [Debian documentation overviewing the tools used in live CD creation](https://live-team.pages.debian.net/live-manual/html/live-manual/overview-of-tools.en.html)
+- [Ubuntu documentation on the live build system](https://wiki.ubuntu.com/Live-Build)
+- [Stackoverflow question about customizing syslinux boot menu timings](https://unix.stackexchange.com/questions/32243/how-do-i-configure-syslinux-to-boot-immediately)
+- [Debian documentation on customizing the boot behaviour of the live CD environment](https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-run-time-behaviours.en.html)
+- [Debian live CD manual](https://live-team.pages.debian.net/live-manual/html/live-manual/index.en.html)
