@@ -8,6 +8,7 @@ Docker image to generate customized Debian live CD ISOs
 
 ```bash
 docker run -it \
+    --privileged \
     -v "$(pwd)":/livecd/iso \
     ghcr.io/somanydoors/custom-live-cd-debian:12
 ```
