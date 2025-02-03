@@ -49,6 +49,9 @@ You can set a custom boot image by setting the following values at runtime:
 
 To configure the dynamic MOTD, put executable shell scripts into `update-motd.d` and rebuild the image, those scripts will be executed in alphabetical order after `/etc/motd` is printed to the console.
 
+### Editing the packages installed in the live OS
+
+To customize the packages that are installed into the live OS, add a file named `name.list.chroot` with a list of packages you want to be installed, then rebuild the image. Each of those package lists will be combined and the packages will be built into the live OS.
 
 ## References
 
