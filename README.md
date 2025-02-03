@@ -34,8 +34,10 @@ docker run -it \
 
 ### Customizing the Boot Image
 
-You can set a custom boot image by setting the following values:
+You can set a custom boot image by setting the following values at runtime:
 
+| Environment Variable | Description |
+| -------------------- | ----------- |
 | `BOOT_IMAGE_BASE64` | Base64 encoded PNG file |
 | `BOOT_IMAGE_WIDTH` | Width (in pixels) of the PNG |
 | `BOOT_IMAGE_HEIGHT` | Height (in pixels) of the PNG |
