@@ -47,7 +47,7 @@ You can set a custom boot image by setting the following values at runtime:
 
 ### Dynamic MOTD
 
-If you put executable shell scripts into `update-motd.d` and rebuild the image, those scripts will be executed in alphabetical order after `/etc/motd` is printed to the console.
+To configure the dynamic MOTD, put executable shell scripts into `update-motd.d` and rebuild the image, those scripts will be executed in alphabetical order after `/etc/motd` is printed to the console.
 
 
 ## References
