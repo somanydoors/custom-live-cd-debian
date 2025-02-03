@@ -47,7 +47,7 @@ if [[ -z "${BOOT_IMAGE_WIDTH}" ]] \
 else
     BOOT_IMAGE_PLACEHOLDER='<!-- BOOT IMAGE PLACEHOLDER -->'
     BOOT_IMAGE_SVG_INJECT="<image width='${BOOT_IMAGE_WIDTH}' height='${BOOT_IMAGE_HEIGHT}' y='${BOOT_IMAGE_Y_POS}' x='${BOOT_IMAGE_X_POS}' xlink:href='data:image/png;base64,${BOOT_IMAGE_BASE64}'><title>${BOOT_IMAGE_TITLE}</title></image>"
-    sed "s~${BOOT_IMAGE_PLACEHOLDER}~${BOOT_IMAGE_SVG_INJECT}~" "${SPLASH_IMAGE}"
+    sed -i "s~${BOOT_IMAGE_PLACEHOLDER}~${BOOT_IMAGE_SVG_INJECT}~" "${SPLASH_IMAGE}"
 fi
 
 lb build
