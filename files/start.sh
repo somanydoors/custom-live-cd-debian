@@ -20,5 +20,11 @@ lb config \
 echo "${MOTD}" > config/includes.chroot/etc/motd
 chmod 644 config/includes.chroot/etc/motd
 
+if [ -n "${GITHUB_USERNAME}"]; then
+    echo "curl -o /root/.ssh/authorized_keys https://github.com/${GITHUB_USERNAME}.keys" > config/includes.chroot/lib/live/config/9001-install-public-keys-from-github
+    chown root:root config/includes.chroot/lib/live/config/9001-install-public-keys-from-github
+    chmod u=rwx,go=rx config/includes.chroot/lib/live/config/9001-install-public-keys-from-github
+fi
+
 lb build
 mv live-image-amd64.hybrid.iso "$ISO_OUT_DIR/$ISO_OUT_NAME.iso"

@@ -1,3 +1,0 @@
-#!/bin/sh
-
-curl -o /root/.ssh/authorized_keys https://github.com/${GITHUB_USERNAME}.keys
